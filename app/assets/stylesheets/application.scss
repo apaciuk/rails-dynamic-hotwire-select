@@ -1,0 +1,46 @@
+// $navbar-default-bg: #312312;
+// $light-orange: #ff8c00;
+// $navbar-default-color: $light-orange;
+
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "bootstrap";
+
+// Fixes bootstrap nav-brand container overlap
+@include media-breakpoint-down(xs) {
+  .container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+// Masquerade alert shouldn't have a bottom margin
+body > .alert {
+  margin-bottom: 0;
+}
+.navbar-dark {
+  background:linear-gradient(90deg, #667eea 0%,#764ba2 100% )!important;
+}
+// Announcements
+.announcement {
+  strong {
+    color: $gray-700;
+    font-weight: 900;
+  }
+}
+
+.unread-announcements:before {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background: $red;
+  content: '';
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  margin-right: 6px;
+}
+
